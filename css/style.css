@@ -10,7 +10,7 @@ html,
   overflow-x: hidden;
   overflow-y: auto;
   background: linear-gradient(to bottom right, rgb(0,207,120), rgb(0,120,207));
-  padding-bottom: 27.5%;
+  padding-bottom: 40%;
   padding: 2%;
   font-family: 'Open Sans', 'Noto Sans', Arial, Helvetica, Verdana, sans-serif;
 }
