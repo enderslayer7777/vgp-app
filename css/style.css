@@ -77,3 +77,7 @@ div.spacer {
 .install-app-btn-container {
   display:none;
 }
+
+::-webkit-scrollbar {
+  width: 0px;
+}
