@@ -1,0 +1,80 @@
+/* Make content area fill the entire browser window */
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans');
+
+html,
+.fullscreen {
+  height: 97%;
+  padding: 0;
+  width: 96%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background: linear-gradient(to bottom right, rgb(0,207,120), rgb(0,120,207));
+  padding-bottom: 20%;
+  padding: 2%;
+  font-family: 'Open Sans', 'Noto Sans', Arial, Helvetica, Verdana, sans-serif;
+}
+
+/* Center the content in the browser window */
+.container {
+  margin: auto;
+}
+
+.title {
+  font-size: 3rem;
+}
+
+footer {
+  position: fixed;
+  padding: 3%;
+  border-left: -3%;
+  bottom: 0;
+  width: 80%;
+  height: 5%;
+  background: rgba(255,255,255,0.8);
+  text-align: center;
+  margin:auto;
+  align-items:center;
+  display:block;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+header {
+  /*margin: auto;*/
+  font-family: 'Open Sans', 'Noto Sans', Arial, Helvetica, Verdana, sans-serif;
+  text-align: center;
+  width: 100%;
+}
+
+h2 {
+  font-size: 3.5rem;
+}
+h3 {
+  font-size: 2rem;
+}
+
+main {
+  width: 100%;
+  text-align: center;
+  font-family: 'Open Sans', 'Noto Sans', Arial, Helvetica, Verdana, sans-serif;
+}
+
+div.spacer {
+  width:100%;
+  height:10%;
+}
+
+.showname {
+  font-weight: bold;
+  text-decoration: italic;
+}
+
+.breaker {
+  width: 100%;
+  height: 5px;
+}
+
+.install-app-btn-container {
+  display:none;
+}
