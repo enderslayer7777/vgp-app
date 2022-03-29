@@ -4,9 +4,9 @@
 
 html,
 .fullscreen {
-  height: 95%;
+  height: 100%;
   padding: 0;
-  width: 94%;
+  width: 96%;
   overflow-y: auto;
   background: linear-gradient(to bottom right, rgb(0,207,120), rgb(0,120,207));
   padding-bottom: 40%;
