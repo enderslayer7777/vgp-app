@@ -1,30 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <title>Vanosky-Graham Productions App</title>
-    <link rel="apple-touch-icon" href="./images/icons/icon-192x192.png" />
-    <link rel="icon" href="./images/icons/icon-192x192.png" />
-    <link rel="stylesheet" href="./css/style.css" />
-    <link rel="manifest" href="./manifest.json" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="white" />
-  </head>
-  <body class="fullscreen">
-    <header>
-      <h2>Vanosky-Graham Productions</h2>
-    </header>
-    <div class="breaker"></div>
-    <main>
-      <section>
+    <script>
+      function setCookie(name,value,days) {
+    var expires = "";
+    if (days) {
+        var date = new Date();
+        date.setTime(date.getTime() + (days*24*60*60*1000));
+        expires = "; expires=" + date.toUTCString();
+    }
+    document.cookie = name + "=" + (value || "")  + expires + "; path=/";
+}
+function getCookie(name) {
+    var nameEQ = name + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0;i < ca.length;i++) {
+        var c = ca[i];
+        while (c.charAt(0)==' ') c = c.substring(1,c.length);
+        if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+    }
+    return null;
+}
+function eraseCookie(name) {   
+    document.cookie = name +'=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+}
+      function mainEdit(type) {
+        if (type == 'theroom') {
+      document.getElementById("main").innerHTML = `<section>
         <h3>
           The Room
        </h3>
         <p>
           <span class="showname">The Room</span> released -- instant success!
         </p>
-      </section>
-      <section>
+      </section>`;
+      setCookie('page','theroom',256*256*256);
+    }
+    if (type == 'stereotypes') {
+      document.getElementById("main").innerHTML = `<section>
         <h3>
           Stereotypes - Pool
         </h3>
@@ -42,8 +55,7 @@
           Strict lifeguard<br>
           Easy-going lifeguard
         </p>
-      </section>
-      <section>
+      </section><section>
         <h3>
           Stereotypes - Hide &amp; Seek
         </h3>
@@ -57,13 +69,45 @@
           The terrible finder<br>
 
         </p>
-      </section>
+      </section>`;
+      setCookie('page','stereotypes',256*256*256);
+    }
+    if (type == 'home') {
+      document.getElementById("main").innerHTML = `<h3>Home</h3><p>Vanosky-Graham Productions Official App/Website.<br>Once you are on the website, follow these instructions to install.<br>Webpage: https://enderslayer7777.github.io/vgp-app<br><br>iPhones/iPads:<br>Open Safari, and go to this page.<br>Click the share icon, and select, "Add To Homescreen". Installed!<br><br>Windows/Mac/Linux/Android:<br> Open Google Chrome (or any Chromium-based browser)<br>Go to this page, click the install icon, and click "Install". You're done!</p>`;
+      setCookie('page','home',256*256*256);
+    }
+    if (type == 'scripts') {
+      document.getElementById("main").innerHTML = `<h3>Scripts</h3><p><a href="https://enderslayer7777.github.io/The-Room/">The Room Script</a></p>`;
+      setCookie('page','scripts',256*256*256);
+    }
+    //console.log(type);
+    }
+    </script>
+    <meta charset="utf-8" />
+    <title>Vanosky-Graham Productions App</title>
+    <link rel="apple-touch-icon" href="./images/icons/icon-192x192.png" />
+    <link rel="icon" href="./images/icons/icon-192x192.png" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="manifest" href="./manifest.json" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="white" />
+  </head>
+  <body class="fullscreen">
+    <header>
+      <h2>Vanosky-Graham Productions</h2>
+      <div class="breaker"></div>
+      <nav>
+        <h3><a onclick="mainEdit('stereotypes')">Stereotypes</a> - <a onclick="mainEdit('theroom')">The Room</a> - <a onclick="mainEdit('scripts')">Scripts</a> - <a onclick="mainEdit('home')">Home</a></h3>
+      </nav>
+      <div class="breaker"></div>
+    </header>
+    <main id="main">
+      <script>
+      mainEdit(getCookie('page'));
+      console.log(getCookie('page'));
+      </script>
     </main>
     <div class="spacer"></div>
-    <footer>
-      <!--App and all contained assets (which is including but not limited to the text, images and the website's code [which includes but is not liomited to HTML code, CSS code, and JavaScript code.]) Copyright &copy; 2022 Vanosky-Graham Productions. All rights reserved. Any copying from previous videos, texts, art, or any other creations is completely unintentional. -->
-      Copyright &copy; 2022 Vanosky-Graham Productions. All rights reserved.
-    </footer>
     <script src="./js/app.js"></script>
   </body>
 </html>
