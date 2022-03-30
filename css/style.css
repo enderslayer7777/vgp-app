@@ -4,12 +4,13 @@
 
 html,
 .fullscreen {
-  height: 100%;
+  height: 97%;
   padding: 0;
   width: 96%;
+  overflow-x: hidden;
   overflow-y: auto;
   background: linear-gradient(to bottom right, rgb(0,207,120), rgb(0,120,207));
-  padding-bottom: 40%;
+  padding-bottom: 20%;
   padding: 2%;
   font-family: 'Open Sans', 'Noto Sans', Arial, Helvetica, Verdana, sans-serif;
 }
@@ -72,6 +73,8 @@ div.spacer {
 .breaker {
   width: 100%;
   height: 5px;
+  background-color: black;
+  border-radius: 66%;
 }
 
 .install-app-btn-container {
@@ -80,4 +83,13 @@ div.spacer {
 
 ::-webkit-scrollbar {
   width: 0px;
+}
+
+nav {
+  width: 100%;
+}
+
+a {
+  color: black;
+  text-decoration: underline;
 }
