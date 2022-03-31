@@ -1,12 +1,12 @@
 // Update 'version' for cache refresh 
 var staticCacheName = 'main';
-var version = 'v0.4.15';
+var version = 'v0.9';
 // Core files in cache
 function updateStaticCache() {
   return caches.open(version + staticCacheName).then(function (cache) {
 	console.log('ServiceWorkers cache opened'); 
 	return cache.addAll([
-		'index.html','manifest.json','README.md','serviceWorker.js','js/app.js','images/icons/icon-192x192.png','images/icons/icon-256x256.png','images/icons/icon-512x512.png','css/style.css'
+		'index.html','manifest.json','README.md','serviceWorker.js','js/app.js','images/icons/icon-192x192.png','images/icons/icon-256x256.png','images/icons/icon-512x512.png','images/icons/icon-32x32.png','images/icons/icon-16x16.png','css/style.css','images/icons/icon-apple-touch.png','images/icons/icon-favicon.ico'
 	]);
   });
 };
